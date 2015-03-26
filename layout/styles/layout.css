@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*
 Template Name: Academic Education V2
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -12,6 +12,9 @@ File: Layout CSS
 @import url("../scripts/nivo-lightbox/nivo-lightbox.min.css");
 @import url("framework.css");
 
+/* Added to deal with the different sized images on the flip screen */
+
+.view > img {width: 960px; height:350px;}
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */

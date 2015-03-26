@@ -18,17 +18,17 @@ var celcen=1;
 
 //1: FIRST message shows up right at top edge (or cell-centered) and pauses;
 //If First message is to show up at bottom edge and starts scrolling, set below value 0:
-var udopt=1;
+var udopt=0;
 
 //WIDTH of the Scroller in pixels: set to your own;
 //"px" unit will automatically be set in the process, so do not write "px";
-var mwidth='auto'; 
+var mwidth='435'; 
 
 //HEIGHT of the Scroller in pixels: set to your own; 
 //"px" unit will automatically be set in the process, so do not write "px";
 //larger Messages (exceeding height) will slide OK anyway, but
 //the exceeding height won't show up on option Instant Recall if chosen!
-var mheight=100; 
+var mheight=500; 
 
 //BACKGROUND: either color(1) or image(2, see below) ;
 //1.Background color: could be like: "#ffff00" or "yellow";
@@ -41,13 +41,13 @@ var mbground="";
 
 //BORDER for scrolling area: 1, ... ;
 //set it 0(zero) for no border;
-var mborder=1;
+var mborder=0;
 
 //SPEED in pixels: the higher the faster - set your own!
-var mspeed=1; 
+var mspeed=2; 
 
 //PAUSE between messages in milliseconds: 1000=1s; set to your own; 
-var mpause = 2000; 
+var mpause = 4000; 
 
 //Live speed-change option: 0 (not desired) or 1 (desired);
 //"stileupdn" would be the STYLE (CSS), see STEP I above;
@@ -89,19 +89,23 @@ var slmg=new Array();
 slmg[0]='<font color="red"><b>I. Vertical Scroller with Recall.</b></font>'+
 '<br />Pauses every message & with mouse over.'+
 ' Use any basic <em>HTML.</em>';
+
 slmg[1]='<font color="red"><b>II. Scroller\'s Features.</b></font>'+
 '<br />Speed, Size, Pause, Background'+
 '<br />- color or image -<em> are adjustable</em>.';
+
 slmg[2]='<font color="red"><b>III.</b>Instant Recall.</font>'+
 '<br />One may recall <b>any message</b> instantaneously'+
 ' if Description Texts have been <b>filled in</b>,'+
 ' else the scroll will <b>go on</b> cycling.';
+
 slmg[3]='<font color="red"><b>IV. Other Possibilities.</b></font>'+
 '<br /><b>If option msgnr=1 (more-up-to-area-size)</b>, a blank space size'+
 ' at your choice is inserted after each and every message.'+
 '<br />Recommended for large scrollers.'+
 '<br /><b>If msgnr=0 (single)</b> blank space is inserted'+
 ' only if text exceeded scrolling area.';
+
 slmg[4]='<font color="red">V. HyperLink</font>'+
 '<br /><a class="tabmsg" target="a_new" href="http://vbarsan.com/"><b>Scrollers Site Map</b></a>';
 // ...
