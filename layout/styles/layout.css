@@ -19,6 +19,8 @@ File: Layout CSS
 iframe{
     height: 754px;
     width: 700px;
+    border: none;
+    
 }
 
 /* Rows

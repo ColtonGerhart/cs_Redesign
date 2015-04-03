@@ -38,5 +38,9 @@ function csGradClick() {
 }
 
 function loadDiv(url) {
-    $('#content').html("<iframe src='" + url + "'</iframe>");
+    $("#content").load(url);
+}
+
+function loadDivProspective(pageUrl) {
+    location.href = pageUrl;
 }
