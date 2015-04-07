@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var sessionStore = session({secret: 'sssh!', cookie: { maxAge: 600000}, resave: true, saveUninitialized: true });
 app.use(sessionStore);
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, {index:'home.html'}));
 	
 var fileTest = require('./javascript/FileTest');
 //app.use('/FileTest', fileTest); 

@@ -14,7 +14,7 @@ module.exports=function(app) {
 
 	var db = monk(credentials.username + ":" + credentials.password + '@hbgwebfe.hbg.psu.edu:27017/gmm5153');
 
-	var userCollection = db.get('DemoCol10');
+	var userCollection = db.get('DemoApril71');
 
 	app.use('/bin/processAddToDB', function(req, res, next) {		
 	//app.get('/addToDB', function(req, res, next) {
@@ -68,8 +68,8 @@ module.exports=function(app) {
 					console.error(err);
 				} else {
 					console.log('Insert Success');
-					res.location('../index.html');
-					res.redirect('../index.html');
+					res.location('../home.html');
+					res.redirect('../home.html');
 				}
 			});
 			

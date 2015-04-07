@@ -11,7 +11,7 @@ module.exports=function(app) {
 
 	var db = monk(credentials.username + ":" + credentials.password + '@hbgwebfe.hbg.psu.edu:27017/gmm5153');
 
-	var userCollection = db.get('DemoCol10');
+	var userCollection = db.get('DemoApril71');
 
 	//app.use('/bin/processGetContent', function(req, res, next) {		
 	app.get('/getContent', function(req, res, next) {

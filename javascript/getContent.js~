@@ -11,7 +11,7 @@ module.exports=function(app) {
 
 	var db = monk(credentials.username + ":" + credentials.password + '@hbgwebfe.hbg.psu.edu:27017/gmm5153');
 
-	var userCollection = db.get('DemoCollection3');
+	var userCollection = db.get('DemoApril7');
 
 	//app.use('/bin/processGetContent', function(req, res, next) {		
 	app.get('/getContent', function(req, res, next) {
@@ -27,8 +27,9 @@ module.exports=function(app) {
 				res.status(500).send("Internal error.");
 				console.error(err);
 			} else if (aggregate){
-
-				res.send(aggregate.demoText);
+				
+				console.log(aggregate);
+				res.send(aggregate);
 	
 			} else {
 				console.log('No entries found.');
