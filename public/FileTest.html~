@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="FileTest.css">
+		<title>FileTest</title>
+	</head>
+	
+	<body>
+		<header>
+			
+		</header>
+
+	<form action="/bin/processAddToDB" method="POST">
+			<div class="table">
+				<div class="table-row">
+					<div class="table-cell">
+						<label for="uname">Add text to the MongoDB:</label>
+					</div>
+					<div class="table-cell">
+						<input type="text" name="uname" id="uname" required pattern="[^A-Za-z]*[A-Za-z]{2}.*">
+					</div>
+				</div>
+			</div>
+			<p>Attach an image (optional):<input type="file" name="img"></p>
+			<p><input type="submit" value="Add"></p>
+			</form>
+	</body>
+</html>
