@@ -1,0 +1,47 @@
+module.exports=function(app) {
+
+	var express=require('express');
+	var sanitizer=require('sanitizer');
+
+	app.use('/js', express.static(__dirname + '/javascript'));
+	
+
+	var monk = require('monk');
+
+	var credentials = require('./credentials');
+
+	var db = monk(credentials.username + ":" + credentials.password + '@hbgwebfe.hbg.psu.edu:27017/gmm5153');
+
+	var userCollection = db.get('DemoCollection3');
+
+	app.use('/bin/processAddToDB', function(req, res, next) {		
+	//app.get('/addToDB', function(req, res, next) {
+   		// We must generate a new session ID to prevent session fixation attacks
+   		req.session.regenerate(function(err) {
+       		if (err)
+           		console.log("Error during session regeneration: " + err);
+   		});
+
+		var uTemp = sanitizer.sanitize(req.body.uname);
+		console.log(req.body.img);
+		var iTemp = sanitizer.sanitize(JSON.stringify(req.body.img));	
+
+		var data = {demoText:uTemp};
+		console.log(iTemp);
+			
+		userCollection.insert(data, function(err, result) {
+			if (err) {
+				res.status(500).send("Internal error.");
+				console.error(err);
+			} else {
+				console.log('Insert Success');
+				res.location('../index.html');
+				res.redirect('../index.html');
+			}
+		});
+			
+		var sess = req.session;
+
+	});
+
+};

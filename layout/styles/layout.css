@@ -19,6 +19,8 @@ File: Layout CSS
 iframe{
     height: 754px;
     width: 700px;
+    border: none;
+    
 }
 
 /* Rows
@@ -359,6 +361,22 @@ tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{
 tr:nth-child(odd), #comments li:nth-child(odd){color:inherit; background-color:#FFFFFF;}
 table a, #comments a{background-color:inherit;}
 
+p.demoAdd{ text-align: right; 
+		display: block;
+}
+
+#eventsContent{
+    height: 0px;
+    overflow: hidden;
+    transition: height 3s;
+    -moz-transition: height 3s; /* Firefox 4 */
+    -webkit-transition: height 3s; /* Safari and Chrome */
+    -o-transition: height 3s; /* Opera */
+}
+
+#rightSidebar{
+    float: right;
+}
 
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
