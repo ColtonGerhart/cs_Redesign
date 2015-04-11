@@ -5,16 +5,14 @@ module.exports=function(app) {
 
 	app.use('/js', express.static(__dirname + '/javascript'));
 	
-	var multiparty = require('multiparty');
+
 	var monk = require('monk');
-	
-	var fs = require('fs');
 
 	var credentials = require('./credentials');
 
 	var db = monk(credentials.username + ":" + credentials.password + '@hbgwebfe.hbg.psu.edu:27017/gmm5153');
 
-	var userCollection = db.get('DemoApril7');
+	var userCollection = db.get('DemoCollection3');
 
 	app.use('/bin/processAddToDB', function(req, res, next) {		
 	//app.get('/addToDB', function(req, res, next) {
@@ -24,65 +22,23 @@ module.exports=function(app) {
            		console.log("Error during session regeneration: " + err);
    		});
 
+		var uTemp = sanitizer.sanitize(req.body.uname);
+		console.log(req.body.img);
+		var iTemp = sanitizer.sanitize(JSON.stringify(req.body.img));	
 
-		
-		var form = new multiparty.Form({uploadDir : __dirname + '/../temp'});
-		
-		form.parse(req, function(err, fields, files) {
-			if(err){
-			console.log(err);
+		var data = {demoText:uTemp};
+		console.log(iTemp);
+			
+		userCollection.insert(data, function(err, result) {
+			if (err) {
+				res.status(500).send("Internal error.");
+				console.error(err);
+			} else {
+				console.log('Insert Success');
+				res.location('../index.html');
+				res.redirect('../index.html');
 			}
-			console.log(fields);
-			console.log(files);
-			console.log(fields.uname[0]);
-			console.log(fields.uname.value);
-			
-			Object.keys(fields).forEach(function(value) {
-				console.log('got value named ' + value);
-			});
-			
-			Object.keys(files).forEach(function(name) {
-			console.log('got file named ' + name);
-			});
-			
-			console.log(files.img[0].path);
-			var tmp_path =  sanitizer.sanitize(files.img[0].path);
-			var target_path = './public/uploads/' + sanitizer.sanitize(files.img[0].originalFilename);
-			
-			fs.rename(tmp_path, target_path, function(err) {
-				if (err) throw err;
-				// delete the temporary file, so that the explicitly set temporary upload dir does not get filled with unwanted files
-				fs.unlink(tmp_path, function() {
-					if (err) throw err;
-				});
-			});
-			
-			var uTemp = sanitizer.sanitize(fields.uname[0]);
-			var iTemp = target_path;
-			
-			var data = {demoText:uTemp, demoImg:iTemp };
-			
-			userCollection.insert(data, function(err, result) {
-				if (err) {
-					res.status(500).send("Internal error.");
-					console.error(err);
-				} else {
-					console.log('Insert Success');
-					res.location('../index.html');
-					res.redirect('../index.html');
-				}
-			});
-			
 		});
-		
-		
-
-			
-		
-		
-
-			
-		
 			
 		var sess = req.session;
 

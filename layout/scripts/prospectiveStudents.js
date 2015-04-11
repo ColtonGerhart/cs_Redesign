@@ -41,6 +41,11 @@ function loadDiv(url) {
     $("#content").load(url);
 }
 
-function loadDivProspective(pageUrl) {
+function loadDivProspective(pageUrl, url) {
+    $("#hdnVal").val(url);
     location.href = pageUrl;
+}
+
+function removeWhitespace(url) {
+    loadDiv(url);
 }

@@ -8,19 +8,17 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html>
 <head>
-    <title>Prospective Students</title>
+    <title>Current Students</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.fitvids.min.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
-    <script type="text/javascript" src="../layout/scripts/prospectiveStudents.js"></script>
-
+    <script type="text/javascript" src="../layout/scripts/currentStudents.js"></script>
 </head>
-<body id="top">
+<body id="top" onload="removeWhitespace()">
     <!-- ################################################################################################ -->
-    <div hidden id="hdnVal"></div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <div class="wrapper row0">
@@ -44,7 +42,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <header id="header" class="clear">
             <!-- ################################################################################################ -->
             <div id="logo" class="fl_left">
-                <h1><a href="/home.html">Prospective Students</a></h1>
+                <h1><a href="/home.html">Current Students</a></h1>
             </div>
             <div class="fl_right">
                 <form class="clear" method="post" action="#">
@@ -129,57 +127,46 @@ Licence URI: http://www.os-templates.com/template-terms
                 <!-- ################################################################################################ -->
                 <div class="sidebar one_quarter first">
                     <!-- ################################################################################################ -->
-                    <h6>Prospective Students</h6>
+                    <h6>Current Students</h6>
                     <nav class="sdb_holder">
                         <ul>
                             <li>
                                 <a href="#" onclick="mathUndergradClick()">Math Undergraduate</a>
-                                <ul id="prospectiveMathUndergraduate" hidden>
-                                    <li><a href="http://tuition.psu.edu/" target="_blank">Tuition and Fees</a></li>
-                                    <li><a href="http://www.hbg.psu.edu/hbg/hbgfinaid.html" target="_blank">Financial Aid</a></li>
+                                <ul id="currentMathUndergraduate" hidden>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/mascfaq.html')">MASC FAQ</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
+                                    <li><a href="https://elion.psu.edu/" target="_blank">Degree Audit</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
                                     <li><a href="http://www.ams.org/careers/" target="_blank">Careers in Mathematics</a></li>
-                                    <li><a href="http://www.maa.org/careers/home.html" target="_blank">Career Profiles</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/entranceRequirements.html')">First Year Students</a></li>
-                                    <li>
-                                        <a href="#">Transferred Students</a>
-                                        <ul>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_Math/math-entrance-psu.html')">from PSU?</a></li>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_Math/math-entrance-hacc.html')">from HACC?</a></li>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_Math/entranceRequirements.html')">from elsewhere?</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="http://www.maa.org/careers/index.html" target="_blank">Career Profiles</a></li>
                                     <li><a href="#" onclick="loadDiv('/pages/BS_Math/degreeRequirements.html')">Degree Requirements</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/minorRequirements.html')">Math Minor</a></li>
+                                    <li><a href="#">Prerequisite Charts</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#" onclick="csUndergradClick()">CS Undergraduate</a>
-                                <ul id="prospectiveCSUndergraduate" hidden>
-                                    <li><a href="http://tuition.psu.edu/" target="_blank">Tuition and Fees</a></li>
-                                    <li><a href="http://www.hbg.psu.edu/hbg/hbgfinaid.html" target="_blank">Financial Aid</a></li>
+                                <ul id="currentCSUndergraduate" hidden>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/csfaq.html')">CS FAQ</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
+                                    <li><a href="https://elion.psu.edu/" target="_blank">Degree Audit</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
                                     <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/entranceRequirements.html')">First Year Students</a></li>
-                                    <li>
-                                        <a href="#">Transferred Students</a>
-                                        <ul>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/compsci-entrance-psu.html')">from PSU?</a></li>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/compsci-entrance-hacc.html')">from HACC?</a></li>
-                                            <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/entranceRequirements.html')">from elsewhere?</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/minorRequirements.html')">Computer Science Minor</a></li>
+                                    <li><a href="#">Prerequisite Charts</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#" onclick="csGradClick()">CS Graduate</a>
-                                <ul id="prospectiveCSGraduate" hidden>
-                                    <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/entranceRequirements.html')">Entrance Requirements</a></li>
+                                <ul id="currentCSGraduate" hidden>
+                                    <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/MS_csfaq.html')">CS FAQ</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
                                     <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
-                                    <li><a href="http://tuition.psu.edu/" target="_blank">Tuition and Fees</a></li>
-                                    <li><a href="http://www.hbg.psu.edu/hbg/hbgfinaid.html" target="_blank">Financial Aid</a></li>
+                                    <li><a href="https://elion.psu.edu/" target="_blank">Grades, Transcripts</a></li>
+                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
                                     <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/MS_csfaq.html')">FAQs</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -200,7 +187,6 @@ Licence URI: http://www.os-templates.com/template-terms
                 <!-- ################################################################################################ -->
                 <div id="content" class="three_quarter">
                     <!-- ################################################################################################ -->
-                    
                     <!-- ################################################################################################ -->
                 </div>
                 <!-- ################################################################################################ -->
