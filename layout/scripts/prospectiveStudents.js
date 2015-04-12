@@ -41,11 +41,11 @@ function loadDiv(url) {
     $("#content").load(url);
 }
 
-function loadDivProspective(pageUrl, url) {
-    $("#hdnVal").val(url);
+function loadDivProspective(pageUrl, contentUrl) {
     location.href = pageUrl;
-}
+    $(window).load(function () {
+        $("#hdnVal").html(contentUrl);
+    });
+    loadDiv(contentUrl);
 
-function removeWhitespace(url) {
-    loadDiv(url);
 }
