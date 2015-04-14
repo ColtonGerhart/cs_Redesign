@@ -16,8 +16,9 @@ Licence URI: http://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.fitvids.min.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
     <script type="text/javascript" src="../layout/scripts/currentStudents.js"></script>
+
 </head>
-<body id="top" onload="removeWhitespace()">
+<body id="top" onload="loadDiv()">
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
@@ -133,40 +134,40 @@ Licence URI: http://www.os-templates.com/template-terms
                             <li>
                                 <a href="#" onclick="mathUndergradClick()">Math Undergraduate</a>
                                 <ul id="currentMathUndergraduate" hidden>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/mascfaq.html')">MASC FAQ</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/mascfaq.html')">MASC FAQ</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
                                     <li><a href="https://elion.psu.edu/" target="_blank">Degree Audit</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
                                     <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
                                     <li><a href="http://www.ams.org/careers/" target="_blank">Careers in Mathematics</a></li>
                                     <li><a href="http://www.maa.org/careers/index.html" target="_blank">Career Profiles</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/degreeRequirements.html')">Degree Requirements</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/degreeRequirements.html')">Degree Requirements</a></li>
                                     <li><a href="#">Prerequisite Charts</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#" onclick="csUndergradClick()">CS Undergraduate</a>
                                 <ul id="currentCSUndergraduate" hidden>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/csfaq.html')">CS FAQ</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_CompSci/csfaq.html')">CS FAQ</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
                                     <li><a href="https://elion.psu.edu/" target="_blank">Degree Audit</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
                                     <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
                                     <li><a href="#">Prerequisite Charts</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#" onclick="csGradClick()">CS Graduate</a>
                                 <ul id="currentCSGraduate" hidden>
-                                    <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/MS_csfaq.html')">CS FAQ</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/MS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/MS_CompSci/MS_csfaq.html')">CS FAQ</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/onlineJournals.html')">Online Journals</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/MS_CompSci/degreeRequirements.html')">Degree Requirements</a></li>
                                     <li><a href="https://elion.psu.edu/" target="_blank">Grades, Transcripts</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_Math/scheduleOfClasses.html')">Schedule of Classes</a></li>
                                     <li><a href="http://www.hbg.psu.edu/careers/" target="_blank">Career Services</a></li>
-                                    <li><a href="#" onclick="loadDiv('/pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
+                                    <li><a href="#" onclick="loadDivProspective('../pages/current_Students.html', '../pages/BS_CompSci/careersInComputing.html')">Careers in Computing</a></li>
                                 </ul>
                             </li>
                         </ul>

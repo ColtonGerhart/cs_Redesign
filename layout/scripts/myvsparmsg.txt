@@ -28,7 +28,7 @@ var mwidth='435';
 //"px" unit will automatically be set in the process, so do not write "px";
 //larger Messages (exceeding height) will slide OK anyway, but
 //the exceeding height won't show up on option Instant Recall if chosen!
-var mheight=500; 
+var mheight=250; 
 
 //BACKGROUND: either color(1) or image(2, see below) ;
 //1.Background color: could be like: "#ffff00" or "yellow";

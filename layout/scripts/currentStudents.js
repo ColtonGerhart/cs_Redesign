@@ -37,14 +37,11 @@ function csGradClick() {
     }
 }
 
-function loadDiv(url) {
+function loadDiv() {
+    var url = window.location.search.substr(1);
     $("#content").load(url);
 }
 
-function loadDivcurrent(pageUrl) {
-    location.href = pageUrl;
-}
-
-function removeWhitespace() {
-    loadDiv('/pages/BS_Math/entranceRequirements.html');
+function loadDivProspective(pageUrl, contentUrl) {
+    location.href = pageUrl + "?" + contentUrl;
 }

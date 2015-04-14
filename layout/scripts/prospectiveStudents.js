@@ -37,13 +37,12 @@ function csGradClick() {
     }
 }
 
-function loadDiv(url) {
+function loadDiv() {
     var url = window.location.search.substr(1);
+    //console.log(trial);
     $("#content").load(url);
 }
 
 function loadDivProspective(pageUrl, contentUrl) {
     location.href = pageUrl + "?" + contentUrl;
-    
-
 }
