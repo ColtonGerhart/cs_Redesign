@@ -38,14 +38,12 @@ function csGradClick() {
 }
 
 function loadDiv(url) {
+    var url = window.location.search.substr(1);
     $("#content").load(url);
 }
 
 function loadDivProspective(pageUrl, contentUrl) {
-    location.href = pageUrl;
-    $(window).load(function () {
-        $("#hdnVal").html(contentUrl);
-    });
-    loadDiv(contentUrl);
+    location.href = pageUrl + "?" + contentUrl;
+    
 
 }
