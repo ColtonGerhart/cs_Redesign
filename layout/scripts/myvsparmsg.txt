@@ -86,5 +86,29 @@ if(rcopt==1){
 //slmg[..]='< ... ><img ... src='+preloadname.src+' /><...>';
 
 var slmg=new Array();
-slmg[0]='';
+-slmg[0]='<font color="red"><b>I. Vertical Scroller with Recall.</b></font>'+
+-'<br />Pauses every message & with mouse over.'+
+-' Use any basic <em>HTML.</em>';
+-
+-slmg[1]='<font color="red"><b>II. Scroller\'s Features.</b></font>'+
+-'<br />Speed, Size, Pause, Background'+
+-'<br />- color or image -<em> are adjustable</em>.';
+-
+-slmg[2]='<font color="red"><b>III.</b>Instant Recall.</font>'+
+-'<br />One may recall <b>any message</b> instantaneously'+
+-' if Description Texts have been <b>filled in</b>,'+
+-' else the scroll will <b>go on</b> cycling.';
+-
+-slmg[3]='<font color="red"><b>IV. Other Possibilities.</b></font>'+
+-'<br /><b>If option msgnr=1 (more-up-to-area-size)</b>, a blank space size'+
+-' at your choice is inserted after each and every message.'+
+-'<br />Recommended for large scrollers.'+
+-'<br /><b>If msgnr=0 (single)</b> blank space is inserted'+
+-' only if text exceeded scrolling area.';
+-
+-slmg[4]='<font color="red">V. HyperLink</font>'+
+-'<br /><a class="tabmsg" target="a_new" href="http://vbarsan.com/"><b>Scrollers Site Map</b></a>';
+-// ...
+-//slmg[...]='...';
+-//end Messages
 /* end of external_remote file "myvsparmsg.txt" */
