@@ -51,8 +51,7 @@ var options = {
    cert: fs.readFileSync('cert.pem')
 };
 
-https.createServer(options, app).listen(6006);
-
-console.log('LISTENING!')
+// calls server listen here
+https.createServer(options, app).listen(6007);
 
 
