@@ -19,15 +19,30 @@ xmlhttp.onreadystatechange=function()
 	aggText = xmlhttp.responseText;
 	if(aggText != null)
 	{
-		var aggObj = JSON.parse(aggText);
-		console.log('<div class="tabmsg"><p>' + aggObj.demoText + '</p><img src="'+ aggObj.demoImg + '"></div>');
-		slmg[0] = '<div class="tabmsg"><p>' + aggObj.demoText + '</p><img src="'+ aggObj.demoImg + '"></div>';
-		document.getElementById("eventsContent").style.height = '500px';
+		var aggArray = JSON.parse(aggText); 
+		var j = 0;
+		for (var i = 0; i < 5; i++, j++) {
+		   if (j >= aggArray.length){
+			j = 0;
+		   }
+		   var aggObj = aggArray[j];
+		if (aggObj.demoImg != './public/uploads/') {
+		   console.log('<div class="tabmsg"><p>' + aggObj.demoText + '</p><img src="'+ aggObj.demoImg + '"></div>');
+		   slmg[i] = '<div class="tabmsg"><p>' + aggObj.demoText + '</p><img src="'+ aggObj.demoImg + '"></div>';
+		   document.getElementById("eventsContent").style.height = '500px';		
+		}
+		else {
+		slmg[i] = '<div class="tabmsg"><p>' + aggObj.demoText + '</p></div>';
+		   document.getElementById("eventsContent").style.height = '300px';		
+		}
+		   //document.getElementById("eventsContent").style.height = '500px';		
+	}
+
 	}else{
 		slmg[0] = '<div class="tabmsg"> NO AGGREGATE FOUND YOU SHOULDNT SEE THIS</div>'
 	}    
     }
-	console.log('IF YOU SEE THIS, HTML AND JAVASCRIPT ARE BROKEN');
   }
 xmlhttp.open("GET","/getContent",true);
 xmlhttp.send();
+document.getElementById("eventsContent").style.height = '0px';
