@@ -32,28 +32,28 @@ module.exports=function(app) {
 			if(err){
 			console.log(err);
 			}
-			console.log(fields);
-			console.log(files);
-			console.log(fields.uname[0]);
-			console.log(fields.uname.value);
+			//console.log(fields);
+			//console.log(files);
+			//console.log(fields.uname[0]);
+			//console.log(fields.uname.value);
 			
 			Object.keys(fields).forEach(function(value) {
 				console.log('got value named ' + value);
 			});
 			
 			Object.keys(files).forEach(function(name) {
-			console.log('got file named ' + name);
+			//console.log('got file named ' + name);
 			});
 			
-			console.log(files.img[0].path);
+			//console.log(files.img[0].path);
 			var tmp_path =  sanitizer.sanitize(files.img[0].path);
 			var target_path = './public/uploads/' + sanitizer.sanitize(files.img[0].originalFilename);
 			
 			fs.rename(tmp_path, target_path, function(err) {
-				if (err) throw err;
+				if (err) return;
 				// delete the temporary file, so that the explicitly set temporary upload dir does not get filled with unwanted files
 				fs.unlink(tmp_path, function() {
-					if (err) throw err;
+					if (err) return;
 				});
 			});
 			
@@ -68,8 +68,8 @@ module.exports=function(app) {
 					console.error(err);
 				} else {
 					console.log('Insert Success');
-					res.location('../index.html');
-					res.redirect('../index.html');
+					res.location('../home.html');
+					res.redirect('../home.html');
 				}
 			});
 			
