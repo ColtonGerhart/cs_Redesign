@@ -86,9 +86,9 @@ if(rcopt==1){
 //slmg[..]='< ... ><img ... src='+preloadname.src+' /><...>';
 
 var slmg=new Array();
-slmg[0]='<font color="red"><b>Welcome to Penn State Harrisburg Math and Computer Science!</b></font>'+
+slmg[0]='<font color="blue"><b>Welcome to Penn State Harrisburg Math and Computer Science!</b></font>'+
 '<br />'+
-' Use any basic <em>HTML.</em>';
+' We are excited that you\'ve chosen to explore our website.<br/>You will find information about the Computer Science and Math Department here at Penn State Harrisburg.';
 
 slmg[1]='<font color="red"><b>II. Scroller\'s Features.</b></font>'+
 '<br />Speed, Size, Pause, Background'+
