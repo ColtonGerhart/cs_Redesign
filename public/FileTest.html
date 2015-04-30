@@ -1,5 +1,54 @@
 <!DOCTYPE html>
+<!--
+Template Name: Academic Education V2
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
 <html>
+<head>
+    <title>PSH Math/CS Dept</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="../layout/styles/myvsstyle.css" />
+    <script language="javascript" type="text/javascript" src="../layout/scripts/myvsparmsg.txt"></script>
+    <script src="../layout/scripts/contentExpand.js"></script>
+    <script type="../text/javascript" src="../layout/scripts/prospectiveStudents.js"></script>
+</head>
+<!--<body id="top">-->
+<body id="top" onload="vsscrollstart();">
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row0">
+        <div id="topbar" class="clear">
+            <!-- ################################################################################################ -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="pages/Contact_Us.html">Contact Us</a></li>
+                    <li><a href="https://elion.psu.edu/" target="_blank">Student Login</a></li>
+                    <li><a href="https://elion.psu.edu/" target="_blank">Staff Login</a></li>
+                </ul>
+            </nav>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <!-- ################################################################################################ -->
+            <div id="logo" class="fl_left">
+                <h1>Add/Modify/Delete an Event</h1>
+            </div>
+            <!-- ################################################################################################ -->
+        </header>
+    </div>
+<center>
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="FileTest.css">
@@ -15,15 +64,22 @@
 			<div class="table">
 				<div class="table-row">
 					<div class="table-cell">
-						<label for="uname">Add text to the MongoDB:</label>
+						<label for="uname">Add an Event:</label>
 					</div>
 					<div class="table-cell">
 						<input type="text" name="uname" id="uname" required pattern="[^A-Za-z]*[A-Za-z]{2}.*">
 					</div>
 				</div>
 			</div>
-			<p>Attach an image (optional): <input type="file" name="img" ></p>
+			<p>Attach an Image (optional): <input type="file" name="img" ></p>
+			<p>Add an Expiration Date to the Event:</p>
+
+			<input style="color:black"  required type="date" id="bday" name="bday" pattern="([0-9]{2}/[0-9]{2}/[0-9]{4})" placeholder="Use MM/DD/YYYY format">
+		
+			<!--<script  type="text/javascript" style="color:black" src="http://www.snaphost.com/jquery/Calendar.aspx"> </script> -->
+
 			<p><input type="submit" value="Add" ></p>
 			</form>
 	</body>
+</center>
 </html>
